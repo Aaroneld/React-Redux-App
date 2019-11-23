@@ -1,40 +1,37 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import DisplayGhibli from './components/DisplayGhibli';
-import GetGhibli from './components/GetGhibli'
-import Axios from 'axios';
+import GetGhibli from './components/GetGhibli';
 import { Reset } from 'styled-reset';
 import { createGlobalStyle } from 'styled-components';
 
 const GlobalStyle = createGlobalStyle`
 
+    * {
+
+      color: white;
+      background: lightblue;
+    }
+
     .App {
 
       margin: 0 5%;
+      
     }
 
     h1 {
 
       text-align: center;
+      font-weight: bold;
+      font-size: 150%;
+      padding: 5% 0;
+      margin-bottom: 2%;
+
     }
 `;
 
 function App() {
 
-  useEffect (() => {
 
-    const getMovies = () => {
-      Axios.get('https://ghibliapi.herokuapp.com/films')
-      .then( response => {
-        console.log(response);
-      })
-      .catch( error => {
-        console.log(error);
-      })
-    };
-
-    getMovies();
-
-  }, []);
 
   return (
     <div className="App">

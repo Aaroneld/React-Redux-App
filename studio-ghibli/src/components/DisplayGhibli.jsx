@@ -5,6 +5,20 @@ import Movie from './Movie';
 
 const Container = styled.section`
 
+    ul {
+
+        display: flex;
+        flex-wrap: wrap;
+        
+        section {
+
+            flex-basis: 26%;
+            margin: 1%;
+            border: 2px solid pink;
+            padding: 2%;
+        }
+
+    }
 `;
 
 const DisplayGhibli = props => {

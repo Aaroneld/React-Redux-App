@@ -5,6 +5,28 @@ import { getMovies } from '../actions';
 
 const Container = styled.section`
 
+    padding: 4% 5%;
+    display: flex;
+    justify-content: center
+    border: 2px solid pink;
+    background: lightgreen;
+
+    button {
+
+        background: teal;
+        color: white;
+        outline: none;
+        border: none;
+        padding: 2% 4%;
+        border: 2px solid lightgreen;
+
+        &:hover {
+
+            background: lightgreen;
+            border: 2px solid orange;
+        }
+    }
+
 `;
 
 const GetGhibli = props => {
